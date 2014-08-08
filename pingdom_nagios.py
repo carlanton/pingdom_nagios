@@ -56,7 +56,8 @@ def post_event(event):
 
     headers = {"Content-type": "application/x-www-form-urlencoded",
                "Accept": "*/*",
-               "Authorization": "Basic %s" % auth}
+               "Authorization": "Basic %s" % auth,
+               "User-Agent": "pingdom_es_nagios-1.0"}
 
     if page:
         url = "/%s/%s" % (page, 'ims.incidents')
